@@ -18,22 +18,96 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 
     <!-- TAILWIND CSS CONFIGERATION -->
-    <style>
-        .manrope{
-            font-family: "Manrope", sans-serif;
-        }
-
-        .bg-deep{
-            background-color: #abef5f;
-        }
-    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+              extend: {
+                colors: {
+                  clifford: '#da373d',
+                  hoverColor: '#494949',
+                  btnPrimary: '#ABEF5F',
+                  headerColor: '#212121',
+                  descriptionColor: '#494949',
+                  cardDescriptionColor: '737373',
+                  bodyBgColor: '#f4f4f4',
+                  workCard1: '#E7C1D3',
+                  workCard2: '#EFDA6E',
+                  workCard3: '#A4DAC3',
+                  workCard4: '#77AAEA',
+                  cardHeaderColor: '#1C1C1C',
+                },
+                fontFamily: {
+                    manrope: ["Manrope", "sans-serif"],
+                },
+                backgroundImage: {
+                  rectangleBg: "url('./assets/Rectangle.png')",
+                }
+              }
+            }
+          }
+        </script>
 
 
 </head>
 
 
-<body>
+<body class="font-manrope">
+    <!-- HEADER SECTION -->
+    <header>
+        <!-- NAVBAR SECTION -->
+        <nav class="navbar bg-base-100 py-10 flex justify-between w-11/12 lg:w-10/12 mx-auto">
+
+            <!-- first part of nav -->
+            <div class="flex gap-x-3 items-center justify-center">
+                <div class="bg-btnPrimary px-2 py-1 rounded-full">
+                  <i class="fa-solid fa-arrow-right-long text-2xl -rotate-45 cursor-pointer"></i>
+                </div>
+                <div>
+                  <a href="#" class="text-3xl font-extrabold">Rinterio</a>
+                </div>
+            </div>  
     
+            <!-- middle part of nav -->
+            <div class="hidden lg:flex">
+                <ul class="flex gap-x-4 px-1 text-base font-normal text-gray-500 ">
+                  <li class="font-semibold"><a href="#">Home</a><li>
+                  <li><a href="#">Services</a><li>
+                  <li><a href="#">Portfolio</a><li>
+                  <li><a href="#">Blogs</a><li>
+                  <li><a href="#">Contact Us</a><li>
+                </ul>
+            </div>
+    
+            <!-- last part of nav -->
+            <div class="space-x-3">
+                <div class="space-x-3 hidden md:block lg:block">
+                    <i class="fa-solid fa-magnifying-glass text-2xl bg-white border text-gray-500 px-3 py-2 rounded-full cursor-pointer"></i>
+                    <i class="fa-solid fa-cart-shopping text-2xl bg-white border text-gray-500 px-3 py-2 rounded-full cursor-pointer"></i>
+                </div>
+                <div class="hidden md:block lg:block">
+                    <button class="text-xl font-extrabold space-x-3 bg-btnPrimary px-5 py-3 rounded-[32px]">Book Consult
+                      <i class="fa-solid fa-arrow-right-long text-2xl -rotate-45 bg-gray-900 text-white px-2 py-1 rounded-full cursor-pointer ml-2"></i>
+                    </button>
+                </div>
+    
+                <div class="dropdown">
+                  <div tabindex="0" role="button" class="btn lg:hidden ">
+                      <i class="fa-solid fa-bars text-3xl"></i>
+                  </div>
+                  <ul class="menu menu-sm dropdown-content bg-base-100 rounded-box mt-2 p-2 shadow right-8">
+                      <li class="font-semibold text-hoverColor"><a href="#">Home</a><li>
+                      <li><a href="#">Services</a><li>
+                      <li><a href="#">Portfolio</a><li>
+                      <li><a href="#">Blogs</a><li>
+                      <li><a href="#">Contact Us</a><li>
+                  </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- BANNER SECTION -->
+        
+    </header>
     
 </body>
 </html>
